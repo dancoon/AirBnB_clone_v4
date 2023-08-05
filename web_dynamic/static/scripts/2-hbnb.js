@@ -2,7 +2,7 @@ $(document).ready(
     () => api_status()
 );
 
-const HOST = '0.0.0.0';
+const HOST = window.location.hostname;
 
 function api_status () {
     const API_URL = `http://${HOST}:5001/api/v1/status/`;
