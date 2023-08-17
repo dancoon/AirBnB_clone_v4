@@ -1,6 +1,6 @@
 $(document).ready(init);
 
-const HOST = '0.0.0.0';
+const HOST = window.location.hostname;
 
 function init () {
   const amenityObj = {};
@@ -18,7 +18,7 @@ function init () {
 }
 
 function apiStatus () {
-  const API_URL = `http://${HOST}:5001/api/v1/status/`;
+  const API_URL = `http://${HOST}:/api/v1/status/`;
   $.get(API_URL, (data, textStatus) => {
     if (textStatus === 'success' && data.status === 'OK') {
       $('#api_status').addClass('available');
