@@ -1,4 +1,7 @@
-$(document).ready(() => init);
+$(document).ready(() => {
+  init();
+  apiStatus();
+});
 
 const HOST = window.location.hostname;
 
@@ -13,8 +16,6 @@ function init() {
     const names = Object.keys(amenityObj);
     $(".amenities h4").text(names.sort().join(", "));
   });
-
-  apiStatus();
 }
 
 function apiStatus() {
